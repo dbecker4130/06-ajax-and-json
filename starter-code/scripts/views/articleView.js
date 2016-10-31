@@ -68,6 +68,9 @@ articleView.renderIndexPage = function() {
   articleView.handleAuthorFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
+  Article.fetchAll();
 };
 
 // TODO: invoke the retrieval process for our data!
+
+articleView.renderIndexPage();
