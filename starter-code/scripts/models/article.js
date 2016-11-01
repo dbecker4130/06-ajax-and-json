@@ -52,7 +52,7 @@ Article.fetchAll = function() {
     2. Then we can render the index page.  */
   } else {
     console.log('did not find blogArticles in localStorage');
-    $.getJSON('../../data/blogArticles.json', 'GET', function(blogArticles) {
+    $.getJSON('data/blogArticles.json', function(blogArticles) {
       Article.loadAll(blogArticles);
       localStorage.setItem('blogArticles', JSON.stringify(blogArticles));
       articleView.renderIndexPage();
